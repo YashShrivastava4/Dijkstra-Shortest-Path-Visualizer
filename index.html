@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dijkstra Grid Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="center">Dijkstra's Algorithm Grid Visualizer</h1>
+    <p class="subtitle">Visualize the shortest path algorithm on a customizable grid. Set start/end, add obstacles, and watch Dijkstra in action!</p>
+  </header>
+  <main id="main-layout">
+    <section id="sidebar">
+      <div id="grid-size-selector">
+        <label for="gridSizeRange"><b>Grid Size:</b></label>
+        <input type="range" id="gridSizeRange" min="10" max="40" value="20">
+        <input type="number" id="gridSizeNumber" min="10" max="40" value="20" style="width: 48px;">
+      </div>
+      <div id="controls">
+        <button id="setStartBtn">Set Start</button>
+        <button id="setEndBtn">Set End</button>
+        <button id="addObstacleBtn">Add/Remove Obstacles</button>
+        <button id="nextStepBtn">Next Step</button>
+        <button id="autoRunBtn">Auto Run</button>
+        <button id="resetBtn">Reset</button>
+        <span id="info"></span>
+      </div>
+      <div id="legend">
+        <h3></h3>
+        <ul>
+          <li><span class="legend-box start"></span> Start</li>
+          <li><span class="legend-box end"></span> End</li>
+          <li><span class="legend-box obstacle"></span> Obstacle</li>
+          <li><span class="legend-box visited"></span> Visited</li>
+          <li><span class="legend-box path"></span> Path</li>
+        </ul>
+      </div>
+      <div id="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Set the <b>Start</b> and <b>End</b> points.</li>
+          <li>Add obstacles by dragging on the grid.</li>
+          <li>Click <b>Next Step</b> or <b>Auto Run</b> to visualize.</li>
+        </ol>
+      </div>
+    </section>
+    <section id="grid-section">
+      <canvas id="gridCanvas" width="600" height="600"></canvas>
+    </section>
+  </main>
+  <footer>
+    <p>Made by Yash Shrivastava</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
